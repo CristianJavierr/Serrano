@@ -1,6 +1,2 @@
 node_modules
 dist
-
-# Large video files
-public/videos/*.mov
-public/videos/*.mp4
