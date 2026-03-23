@@ -36,7 +36,7 @@ export default function Navbar() {
   }, []);
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-white">
+    <nav className="top-0 left-0 right-0 z-50 bg-white">
       <div className="px-5 md:px-8 lg:px-10 h-16 flex items-center">
         <div className="max-w-6xl mx-auto w-full flex items-center justify-between">
 
@@ -53,7 +53,7 @@ export default function Navbar() {
 
           {/* Desktop nav links */}
           <div style={{ overflow: 'hidden' }}>
-            <div ref={linksRef} className="hidden md:flex items-center gap-6 text-sm text-[#444]">
+            <div ref={linksRef} className="hidden md:flex items-center gap-6 text-sm font-semibold text-[#444]">
             <div className="relative">
               <button
                 className="flex items-center gap-1 cursor-pointer hover:text-[#1A1A1A] transition-colors whitespace-nowrap"
@@ -85,7 +85,7 @@ export default function Navbar() {
             <div ref={ctaRef} className="hidden md:flex items-center gap-3">
             <a
               href="tel:8299740294"
-              className="text-sm text-[#444] hover:text-[#1A1A1A] transition-colors cursor-pointer whitespace-nowrap flex items-center gap-1.5"
+              className="text-sm font-semibold text-[#444] hover:text-[#1A1A1A] transition-colors cursor-pointer whitespace-nowrap flex items-center gap-1.5"
             >
               <span className="w-4 h-4 flex items-center justify-center">
                 <i className="ri-phone-line" />

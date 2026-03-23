@@ -36,6 +36,7 @@ export default function HeroSection() {
       .to(imgWipeRef.current, {
         top: '0%', left: '0%', width: '100%', height: '100%',
         duration: 0.85, ease: 'power2.inOut',
+        onComplete: () => window.dispatchEvent(new CustomEvent('heroAnimationDone'))
       }, '+=0.8')
       .to(videoRef.current, { scale: 1, duration: 1.15, ease: 'power2.out' }, '-=0.85')
       .to(line1Ref.current, { xPercent: 0, duration: 1.4, ease: 'cubic-bezier(0.52, 0.00, 0.48, 1.00)' }, '-=0.45')
@@ -90,7 +91,7 @@ export default function HeroSection() {
   const formatDate = (d: string) => d;
 
   return (
-    <section ref={sectionRef} id="hero" className="w-full bg-white pt-16">
+    <section ref={sectionRef} id="hero" className="w-full bg-white">
 
       {/* Full-screen loader — visible until hero image fires onLoad */}
       <div
